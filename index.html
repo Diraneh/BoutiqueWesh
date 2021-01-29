@@ -164,7 +164,38 @@
     
     
         
-        <div class="container">
+        <div class="container-fluid">
+          <div class="flaticon-left-arrow">
+
+          
+            <div class="col-3 col-md-3" v-for="product in info">
+        
+            <img v-bind:src = product.image   alt="toto" style="width:150px; height:auto">
+        </div>
+          
+        </div>
+      </div>
+
+    </div>
+  </div>
+      </section>
+    
+
+          <section>
+    
+      <div   id="appp" >
+
+      
+   
+     
+    
+        
+      
+        <div  v-if="loading"></div>
+    
+    
+        
+        <div class="container-fluid">
           <div class="flaticon-left-arrow">
 
           
@@ -183,5 +214,6 @@
     
        <script src="https://unpkg.com/vue"></script>
        <script src="JS/donne.js"></script>
+       <script src="JS/donnewomen.js"></script>
      </body>
     </html>
