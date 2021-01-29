@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>The greatest news app ever</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <link rel="stylesheet" href="https://bootswatch.com/4/cerulean/bootstrap.min.css">
+  </head>
+  <body>
+
+
+    
+    <div id="app">
+      <h1>Bitcoin Price Index</h1>
+    
+      <section v-if="errored">
+        <p>Nous sommes désolés, nous ne sommes pas en mesure de récupérer ces informations pour le moment. Veuillez réessayer ultérieurement.</p>
+      </section>
+    
+      <section v-else>
+        <div v-if="loading">Chargement...</div>
+    
+        <div v-else>
+        
+        <div class="container" v-for="product in info">
+        {{product.title}}
+        {{product.price}}
+        {{product.category}}
+        <img v-bind:src = product.image  alt="toto" style="width:150px; height:auto">
+        </div>
+          
+        </div>
+    
+      </section>
+    </div>
+    
+       <script src="https://unpkg.com/vue"></script>
+       <script src="donne.js"></script>
+     </body>
+    </html>
