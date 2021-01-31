@@ -1,5 +1,5 @@
 new Vue({
-    el: '#appp',
+  el: '#apperrs',
     data() {
       return {
         info: null,
@@ -9,7 +9,7 @@ new Vue({
     },
     created() {
       axios
-        .get('https://fakestoreapi.com/products/category/women clothing?limit=4')
+        .get('https://fakestoreapi.com/products')
         .then(response => {
           this.info = response.data
   
